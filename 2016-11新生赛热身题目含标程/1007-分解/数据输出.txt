@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<string.h>
+#define bt(i) (1<<i)
+	
+int main(){
+	int a,b,c,d,x,y,z,m,n,ans,i,j,t;
+	freopen("G:\\tempdata\\input.txt","r",stdin);
+	freopen("G:\\tempdata\\output.txt","w",stdout);
+	while(~scanf("%d",&n)){
+		for(i=14;i>=0;i--) if(bt(i)-1<=n) break;
+		for(n-=bt(i)-1,ans=i,i=0;i<11;i++) if(bt(i)&n) ans++;
+		printf("%d\n",ans?ans:-1);
+	}
+	return 0;
+}	
+/*
+	freopen("G:\\tempdata\\input.txt","r",stdin);
+	freopen("G:\\tempdata\\output.txt","w",stdout);
+
+10 3 1 2 3 3 3
+
+10 10 1 2 3 3 3
+
+5 10 1 2 3 3 3
+*/

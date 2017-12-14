@@ -1,0 +1,19 @@
+Water brother is a tuhao, he decides to buy "La Tiao" for small Seewhy and big Cold. Don't ask why "You Qian, Ren Xing". But after paying for the "La Tiao" Water brother realized that there are two sizes of "La Tiao" in his bag, 1kg and 2kg. Water brother want to Seewhy and Cold get the same weight of "La Tiao" otherwise they can not play happily. So can you tell Water brother whether he can let his friends get the same weight of "La Tiao". If you solve this question Water brother may give you a package of "La Tiao"!!!
+
+Input
+The first line is N (1<=n<=100)stands for the number of "La Tiao" Water brother has bought.
+The second line has N number ,they are 1 or 2, stand for the weight of each package of "La Tiao".
+
+Output
+If Seewhy and Cold can get the same weight of "La Tiao" print print "YES" (without the quotes), otherwise print "NO" (without the quotes).
+
+input
+3
+1 2 1
+4
+1 1 1 2
+
+output
+YES
+NO
+

@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+	
+int tn[10];
+void random(int &x){
+	int i;
+	for(x=i=0;i<6;i++) x+=tn[i]*(rand()%10);
+}	
+int main(){
+	int T,a,b,c,i,j,k,t,l,r,n,m,p,x,ans;
+	for(i=tn[0]=1;i<10;i++) tn[i]=tn[i-1]*10;
+	freopen("G:\\tempdata\\input.txt","w",stdout);
+	printf("1111 13 6 1\n");
+	printf("1111 11 6 1\n");
+	printf("1111 11 4 1\n");
+	printf("1111 11 6 2\n");
+	T=1000;
+	while(T--){
+		random(x);
+		printf("%d ",x);
+		random(a);random(b);random(c);
+		if(c>b) swap(b,c);
+		if(b>a) swap(a,b);
+		if(c>b) swap(b,c);
+		c=c/3;
+		printf("%d %d %d\n",a,b,c);
+	}
+	return 0;
+} 	

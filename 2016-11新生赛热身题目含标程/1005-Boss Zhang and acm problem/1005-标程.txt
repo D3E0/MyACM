@@ -1,0 +1,32 @@
+#include<stdio.h>
+#include<string.h>
+#include<algorithm>
+ using namespace std;
+typedef __int64 LL;
+	
+int b[3],a[3];
+LL x;	
+int main(){
+	int i=0,T,j,l,r,k,n,m;
+	while(~scanf("%d%d%d%d",&n,&b[0],&b[1],&b[2])){
+		a[0]=10,a[1]=5,a[2]=1;
+		if(b[2]*a[1]>b[1]*a[2]) swap(b[2],b[1]),swap(a[2],a[1]);
+		if(b[1]*a[0]>b[0]*a[1]) swap(b[0],b[1]),swap(a[0],a[1]);
+		if(b[2]*a[1]>b[1]*a[2]) swap(b[2],b[1]),swap(a[2],a[1]);
+		for(x=i=0;i<3&&n;n%=a[i++]) x+=(LL)n/a[i]*b[i];
+		printf("%I64d\n",x);
+	}
+	return 0;
+}	
+/*
+1111
+13 6 1
+1111
+11 6 1
+1111
+11 4 1
+1111
+11 6 2
+
+
+*/

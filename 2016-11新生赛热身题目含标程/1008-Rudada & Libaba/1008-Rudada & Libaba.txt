@@ -1,0 +1,11 @@
+Problem Description
+	RuDaDa and Libaba are lovers¡£They usually show their love in all kinds of sutiations¡£So the others want to know specific love value of them¡£Now give the product of their love(the product is RuDaDa¡¯s Love multiply LiBaBa¡¯Love), and each of the love is a prime¡£Besides, RuDaDa¡¯s Love is Bigger than LiBaBa ¡£Can you tell me the value of RuDaDa¡¯s Love?
+
+Input
+	There are multiple test cases. Each case contains a positive integer N(6=<N<=2*10^9)
+Output
+	Print RuDaDa¡¯Love on a single line for each test case.
+Sample Input
+	21
+Sample Output
+	7

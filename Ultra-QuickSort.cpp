@@ -1,0 +1,56 @@
+#include <cstdio>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+typedef long long LL;
+const int MAXN = 500015;
+int a[MAXN];
+int an[MAXN];
+LL ans;
+void Merge(int begin,int end,int mid)
+{
+	int num = end - begin + 1;
+	for(int i = 0; i < num; ++i)
+	an[i] = a[begin + i];
+	int n1,n2;
+	n1 = mid - begin + 1;
+	n2 = end - mid;
+	int i = 0;
+	int j = n1;
+	for(int k = begin; k <= end; ++k)
+	{
+		if(i >= n1)
+		a[k] = an[j++];
+		else if(j >= n2 + n1)
+		a[k] = an[i++];
+		else if(an[i] > an[j])
+		{
+			a[k] = an[j++];
+			ans += n1 - i;
+		}		
+		else
+		a[k] = an[i++];
+	}
+}
+void sort(int begin,int end)
+{
+	if(begin >= end)
+	return;
+	int mid = (begin + end) >> 1;
+    sort(begin,mid);
+    sort(mid + 1, end);	
+    Merge(begin,end,mid);	
+}
+int main()
+{
+	int n;
+	while(~scanf("%d",&n)&&n)
+	{
+		ans = 0;
+		for(int i = 0;i < n; ++i)
+		scanf("%lld",&a[i]);
+		sort(0,n-1);
+		printf("%lld\n",ans);
+	}
+	return 0;
+}

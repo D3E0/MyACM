@@ -1,0 +1,63 @@
+//
+//  main.cpp
+//  DataCreater
+//
+//  Created by seewhy on 14/12/11.
+//  Copyright (c) 2014Äê DreamTouch. All rights reserved.
+//
+
+#include <iostream>
+#include <fstream>
+#include <cmath>
+#include <cstdio>
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+bool judgePrime(long long n)
+{
+	if(n==1 || n == 0) return 0;
+    {
+        for(long long i = 2; i <= sqrt(n*1.0); ++i)
+            if(n % i==0) return 0;
+        return 1;
+    }
+}
+ofstream fout("input.txt");
+int main(int argc, char * argv[]) {
+     srand(time(NULL));
+  //  long long n;
+//    fout << 4000<<endl;
+   // fout << 1000001999999973;
+//    cout<<  rand() << "  "<< rand()<< endl;
+//    int cnt = 0,ok=0;
+//    for (long long i = 20000; i >=4; --i) {
+//        for (long long j = 20000; j >= 3; --j) {
+//            if (judgePrime(i) && judgePrime(j)) {
+//                fout << i * j << endl;
+//                cout << i * j << endl;
+//                cnt++;
+//                if (cnt>=500) {
+//                    ok=1;
+//                    break;
+//
+//                }
+//            }
+//            if(ok) break;
+//        }
+//    }
+    int T = 15000,cnt;
+    while (T) {
+        long long a = rand()%1000000;
+        long long b = rand()%1000000;
+        if(a*b<2000000000&& judgePrime(a) * judgePrime(b))
+        {
+            T--;
+            cnt++;
+            fout <<a*b<<endl;
+          //  cout <<a*b<<endl;
+        }
+    }
+    cout << cnt << endl;
+    return 0;
+}

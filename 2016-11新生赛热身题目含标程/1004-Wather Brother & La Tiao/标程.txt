@@ -1,0 +1,56 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <cmath>
+#include <climits>
+#include <ctime>
+#include <string>
+#include <vector>
+#include <set>
+#include <queue>
+#include <stack>
+#include <map>
+#include <iomanip>
+#include <algorithm>
+#include<time.h>  
+using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+const int mod = 1000000007;
+const double pi = acos (-1.0);
+const double eps = 1e-12;
+int maxx, minn;
+int maxi, mini;
+int cases = 0;
+void add (int &a, int &b){ a = (a + b) % mod; }
+void mul (int &a, int &b){ a = (ll)a*(ll)b%mod; }
+int gcd (int a, int b){ return b ? gcd (b, a%b) : a; }
+/*hehe*/
+int ss[105], ta, tb, n;
+int num = 0;
+int main ()
+{
+	//freopen ("e:\\cinput.txt", "r", stdin);
+	//freopen ("e:\\coutput.txt", "w", stdout);
+	long beginTime = clock ();
+	while (cin >> n)
+	{
+		ta = tb = 0;
+		memset (ss, 0, sizeof(ss));
+		num++;
+		for (int i = 1; i <= n; i++) cin >> ss[i];
+		sort (ss + 1, ss + n + 1);
+		for (int i = n; i >= 1; i--)
+		if (tb > ta) ta += ss[i];
+		else tb += ss[i];
+		if (ta != tb) cout << "NO" << endl;
+		else cout << "YES" << endl;
+	}
+
+	long endTime = clock ();
+	//cout << "endTime-beginTime:" << endTime - beginTime << endl;
+	//cout << "test:" << num << endl;
+	return 0;
+}

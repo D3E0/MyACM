@@ -1,0 +1,19 @@
+Problem Description:
+	Old Feng has a math problem, his math is poor.He asked Mr Liu for help, but Mr Liu think it's too young too simple.So, he is not willing to solve this problem.So, can you help Old Feng? If you help old feng solve this problem, he will be Meng Meng Da and take you ZhuangBi Take you fly, take you fly to the night.
+	Then came the question.Here is a multinomial F(o,p,q,r,s,t,u,v,w) = ao + bp + cq + dr + es + ft + gu + hv + iw + j and give you ten coefficients a, b, c, d, e, f, g, h, i, j.Then you should print this multinomial.More details in sample.
+
+Input
+	The first line is an integer N, stands for the number of test data (N<120). Then N tests follows. For each data, there are 10 integer numbers on one line, a, b, c, d, e, f, g, h, i, j 
+
+Output
+	Print the multinomial F(o,p,q,r,s,t,u,v,w) = ao + bp + cq + dr + es + ft + gu + hv + iw + j
+
+Sample Input
+
+2
+0 46 3 4 -5 -22 -8 -32 24 27
+2 31 -5 0 0 12 0 0 -49 12
+
+Sample Output
+46p+3q+4r-5s-22t-8u-32v+24w+27
+2o+31p-5q+12t-49w+12

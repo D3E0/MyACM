@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<string.h>
+#include<iostream>
+#include<stdlib.h>
+using namespace std;
+	
+int tn[10];
+void random(int &x){
+	int i;
+	for(x=i=0;i<6;i++) x+=tn[i]*(rand()%10);
+}	
+int main(){
+	int T,a,b,c,i,j,k,t,l,r,n,m,p,x,y,z,ans;
+	for(i=tn[0]=1;i<10;i++) tn[i]=tn[i-1]*10;
+	freopen("G:\\tempdata\\input.txt","w",stdout);
+	printf("10 3 1 2 3 3 3\n");
+	printf("10 10 1 2 3 3 3\n");
+	printf("5 10 1 2 3 3 3\n");
+	T=3000;
+	while(T--){
+		n=rand()%1000;
+		m=rand()%1000;
+		x=rand()%1000;
+		y=rand()%1000;
+		z=rand()%1000;
+		a=rand()%1000;
+		b=rand()%1000;
+		printf("%d %d %d %d %d %d %d\n",n,m,x,y,z,a,b);
+	}
+	T=1000;
+	while(T--){
+		n=rand()%100;
+		m=rand()%100;
+		x=rand()%100;
+		y=rand()%100;
+		z=rand()%100;
+		a=rand()%100;
+		b=rand()%100;
+		printf("%d %d %d %d %d %d %d\n",n,m,x,y,z,a,b);
+	}
+	T=1000;
+	while(T--){
+		n=rand()%10+1;
+		m=rand()%10+1;
+		x=rand()%10+1;
+		y=rand()%10+1;
+		z=rand()%10+1;
+		a=rand()%10+1;
+		b=rand()%10+1;
+		printf("%d %d %d %d %d %d %d\n",n,m,x,y,z,a,b);
+	}
+	return 0;
+} 	
+/*
+10 3 1 2 3 3 3
+
+10 10 1 2 3 3 3
+
+5 10 1 2 3 3 3
+
+*/

@@ -1,0 +1,23 @@
+B 购买物品
+Problem Description
+
+	You have a lot of acm problems but you always WA，TLE, RE. As we all know, Boss Zhang is the leader of ZUST ACM TEAM. SO you ask him for help.And Boss Zhang will help you if you pay money to him.In order to give customers more FULI. He will provide you 3 packages.First, 10 yuan for x problems;second, 5 yuan for y problems and 1 yuan for z problems. And you have n yuan, if you ask Boss Zhang for help.What's the most number of problems you can solve?
+	——谨以此题向我们的大平神致敬！
+
+Input
+	Each line has four integers n, x, y, z(0<=n, x, y, z <= 1000000, n stand for the money you have).The input will end with EOF.
+
+Output
+	Output an integer stands for the maximum problems you can solve.
+
+Sample Input
+
+
+1111 13 6 1
+1111 11 6 2
+
+Sample Output
+
+1444
+2222
+

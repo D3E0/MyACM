@@ -1,0 +1,59 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <cmath>
+#include <climits>
+#include <ctime>
+#include <string>
+#include <vector>
+#include <set>
+#include <queue>
+#include <stack>
+#include <map>
+#include <iomanip>
+#include <algorithm>
+#include<time.h>  
+using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+const int mod = 1000000007;
+const double pi = acos (-1.0);
+const double eps = 1e-12;
+int maxx, minn;
+int maxi, mini;
+int cases = 0;
+void add (int &a, int &b){ a = (a + b) % mod; }
+void mul (int &a, int &b){ a = (ll)a*(ll)b%mod; }
+int gcd (int a, int b){ return b ? gcd (b, a%b) : a; }
+/*hehe*/
+int main ()
+{
+	//freopen ("e:\\binput.txt", "r", stdin);
+	//freopen ("e:\\boutput.txt", "w", stdout);
+	int n, a[1010], ans, b, i;
+	int num = 0;
+	long beginTime = clock ();
+	while (cin >> n&&n)
+	{
+		num++;
+		for (ans = i = 0; i < n; i++)
+		{
+			cin >> a[i];
+		}
+		cin >> b;
+		for (i = 0; i < n; i++)
+		{
+			if (a[i] == b)
+			{
+				ans++;
+			}
+		}
+		cout << ans << endl;
+	}
+	long endTime = clock ();
+	//cout << "endTime-beginTime:" << endTime - beginTime << endl;
+	//cout << "hehe" << num << endl;
+	return 0;
+}

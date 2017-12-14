@@ -1,0 +1,50 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <cmath>
+#include <climits>
+#include <string>
+#include <vector>
+#include <set>
+#include <queue>
+#include <stack>
+#include <map>
+#include <iomanip>
+#include <algorithm>
+using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+const int mod = 1000000007;
+const double pi = acos (-1.0);
+const double eps = 1e-12;
+int maxx, minn;
+int maxi, mini;
+int cases = 0;
+void add (int &a, int &b){ a = (a + b) % mod; }
+void mul (int &a, int &b){ a = (ll)a*(ll)b%mod; }
+int gcd (int a, int b){ return b ? gcd (b, a%b) : a; }
+/*hehe*/
+int main (){
+	int T;
+	int n;
+	int i, j;
+	freopen ("e://cinput.txt", "w", stdout);
+	T = 100;
+	while (T--){
+		n = rand () % 100 + 1;
+		printf ("%d\n", n);
+		for (i = 0; i < n - 1; i++)
+		{
+			printf ("%d ", rand () % 2 + 1);
+		}
+		printf ("%d\n", rand () % 2 + 1);
+	}
+	printf ("7\n2 2 2 1 2 2 2\n");
+	printf ("4\n1 1 2 2\n");
+	printf ("6\n1 1 1 2 2 2\n");
+	printf ("4\n2 1 1 2\n");
+	printf ("5\n1 1 1 1 2\n");
+	return 0;
+}

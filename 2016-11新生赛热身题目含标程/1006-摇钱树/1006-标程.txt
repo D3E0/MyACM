@@ -1,0 +1,38 @@
+#include<stdio.h>
+#include<string.h>
+#include<algorithm>
+using namespace std;
+typedef __int64 LL;
+const int N=1005;
+	
+inline int ff(int x,int y){
+	if(y) return x/y+bool(x%y);
+	else return N;
+}	
+int main(){
+	int a,b,c,d,x,y,z,m,n,ans,i,j,t;
+	while(~scanf("%d%d%d%d%d%d%d",&n,&m,&x,&y,&z,&a,&b)){
+		y=max(x,y),z=max(y,z);
+		ans=n+x*m;
+		if(a>n) c=ff(a-n,x);
+		else c=0;
+		if(c<=m) ans=max(ans,c*x+(m-c)*y-a+n);
+		t=a+b-c*x-n;
+		if(t>0) d=ff(t,y)+c;
+		else d=c;
+		if(d<=m) ans=max(ans,c*x+(d-c)*y+(m-d)*z+n-a-b);
+		printf("%d\n",ans);
+	}
+	return 0;
+}	
+/*
+	freopen("G:\\tempdata\\input.txt","r",stdin);
+	freopen("G:\\tempdata\\output.txt","w",stdout);
+4 4 7 6 10 2 5
+
+10 3 1 2 3 3 3
+
+10 10 1 2 3 3 3
+
+5 10 1 2 3 3 3
+*/

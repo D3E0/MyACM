@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+
+struct P{
+    int v;
+    int w;
+}p[25];
+
+int cmp(const void *a, const void *b){
+    struct P *c = (struct P *)a;
+    struct P *d = (struct P *)b;
+    return d->v - c->v;
+}
+
+int main(){
+    freopen("input.txt", "r", stdin);
+    freopen("output.txt", "w", stdout);
+    int n, s, m, a, b, i, ans;
+    scanf("%d", &n);
+    while(n--){
+        scanf("%d %d", &s, &m);
+        for(i = 0; i < s; i++){
+            scanf("%d %d", &p[i].v, &p[i].w);
+        }
+        qsort(p, s, sizeof(p[0]),cmp);
+        i = ans = 0;
+        while(m >= p[i].w){
+            ans += p[i].w * p[i].v;
+            m -= p[i].w;
+            i++;
+        }
+        ans += m * p[i].v;
+        printf("%d\n", ans);
+    }
+    return 0;
+}

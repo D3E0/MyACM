@@ -1,0 +1,54 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <cmath>
+#include <climits>
+#include <string>
+#include <vector>
+#include <set>
+#include <queue>
+#include <stack>
+#include <map>
+#include <iomanip>
+#include <algorithm>
+using namespace std;
+typedef long long ll;
+typedef unsigned long long ull;
+const int mod = 1000000007;
+const double pi = acos (-1.0);
+const double eps = 1e-12;
+int maxx, minn;
+int maxi, mini;
+int cases = 0;
+void add (int &a, int &b){ a = (a + b) % mod; }
+void mul (int &a, int &b){ a = (ll)a*(ll)b%mod; }
+int gcd (int a, int b){ return b ? gcd (b, a%b) : a; }
+/*hehe*/
+int main (){
+	int T;
+	int n;
+	int i, j;
+	freopen ("e:\\dinput.txt", "w", stdout);
+	T = 110;
+	printf("120\n");
+	while (T--){
+		for(i = 0; i < 9; i++){
+            printf("%d ",rand()%200-100);
+		}
+		printf("%d\n",rand()%200-100);
+	}
+	printf("0 0 0 0 0 0 0 0 0 0\n");
+	printf("1 1 1 1 1 1 1 1 1 0\n");
+	printf("0 0 0 0 0 0 0 0 0 -1\n");
+	printf("0 0 0 0 0 0 0 0 0 1\n");
+	printf("1 -1 1 -1 1 -1 1 -1 1 0\n");
+	printf("-1 -1 -1 -1 -1 -1 -1 -1 -1 -1\n");
+	printf("0 0 0 0 0 -1 -1 1 1 1\n");
+	printf("0 1 0 -1 0 1 0 -1 0 0\n");
+	printf("1 0 0 0 0 0 0 0 0 1\n");
+	printf("0 0 0 0 -1 0 0 0 0 0\n");
+
+	return 0;
+}

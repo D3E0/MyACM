@@ -3,7 +3,7 @@
 #include <algorithm>
 using namespace std;
 typedef long long LL;
-const int MAXN = 500015;
+const int MAXN = 100005;
 int a[MAXN];
 int an[MAXN];
 LL ans;
@@ -44,7 +44,7 @@ void sort(int begin,int end)
 int main()
 {
 	int n;
-	while(~scanf("%d",&n)&&n)
+	scanf("%d",&n);
 	{
 		ans = 0;
 		for(int i = 0;i < n; ++i)
